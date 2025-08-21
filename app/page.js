@@ -31,14 +31,14 @@ export default function Home() {
         <h5 className="text-neutral-300 text-sm">Get To Know</h5>
         <h2 className="font-dm font-semibold text-xl">About me</h2>
 
-        <div className="info flex-col md:flex md:flex-row  justify-between mt-10  gap-2 py-8">
-          <div className="img  md:w-2/5">
+        <div className="info flex flex-col md:flex-row  justify-center mt-10  gap-2 py-8">
+          <div className="img mx-8 md:w-2/5">
             <Image className="h-80 w-100 object-cover rounded-xl" height={100} width={80} src={'/LOGO.jpg'} alt="Logo illustrations"/>
           </div>
-          <div className="aboutinfo p-4 md:w-3/5 ">
+          <div className="aboutinfo   md:w-3/5 ">
             <span className="text-neutral-200 text-md font-pop text-justify">Heloo, I am Mahammad Arish full stack developer,I am from Mangalore, Karnataka. My educational background in computer science. I am a Fresher now, 
               Aspiring software developer with skills in web development, looking to grow through real-world projects</span>
-              <div className="flex gap-8 md:mt-12 min-h-32 min-w-40">
+              <div className="flex gap-8 md:mt-12 mt-2 min-h-32 min-w-40">
                 <div className=" rounded-md w-40  bg-neutral-700 p-0.5 group bg-gradient-to-br from-purple-500 to-pink-500 ">
                     <span className="relative  flex flex-col items-center gap-2 px-6 py-6  transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md ">
                        <span><FaListCheck size={25}/></span>
@@ -74,10 +74,10 @@ export default function Home() {
 
 
     {/* Contact Form to User  */}
-    <div className="min-h-screen" id="contact">
+    
        <Contact/>
 
-    </div>
+    
    
   </>
   );

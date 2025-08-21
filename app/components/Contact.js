@@ -55,12 +55,12 @@ function Contact() {
     }
 
     return (
-        <div className="contact-form flex flex-col justify-center items-center">
+        <div className="contact-form flex flex-col justify-center items-center min-h-screen  " id="contact">
 
             <h5 className="text-neutral-300 text-sm">Get In Touch</h5>
             <h2 className="font-dm font-semibold text-2xl">Contact me</h2>
             <div className="contact w-full flex flex-col md:flex-row justify-around gap-4 mt-10">
-                <div className="form md:w-[40%]  p-0.5 ml-10 bg-neutral-700 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500">
+                <div className="form md:w-1/2  p-0.5 mx-2 md:ml-10 bg-neutral-700 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500">
                     <span className="relative rounded-lg  flex flex-col  px-6 py-2 transition-all ease-in duration-75 bg-white dark:bg-gray-900">
                         <form onSubmit={handleSubmit}>
                             <div className="input flex flex-col gap-2 my-2">
@@ -81,8 +81,8 @@ function Contact() {
                         </form>
                     </span>
                 </div>
-                <div className="social md:w-1/2 ml-6">
-                    <div className='flex  md:flex-row flex-col justify-center gap-12'>
+                <div className="social md:w-1/2   ">
+                    <div className='flex  md:flex-row flex-col justify-center md:items-center mx-2 gap-8 '>
                         <div className=" rounded-md   bg-neutral-700 p-0.5 group bg-gradient-to-br from-purple-500 to-pink-500 ">
                             <span className="relative  flex flex-col items-center gap-2 px-6 py-6  transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md ">
                                 <span><FaRegEnvelope size={25} /></span>
@@ -90,16 +90,15 @@ function Contact() {
                                 <h5>Send me an Email</h5>
                             </span>
                         </div>
-                        <div className=" rounded-md   bg-neutral-700 p-0.5 group bg-gradient-to-br from-purple-500 to-pink-500 ">
+                        <div className=" rounded-md   bg-neutral-700 p-0.5 group bg-gradient-to-br from-purple-500 to-pink-500">
                             <span className="relative  flex flex-col items-center gap-2 px-6 py-6  transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md ">
                                 <span><FaWhatsapp size={25} /></span>
                                 <span>+917994061577</span>
                                 <h5>Send me an Message</h5>
                             </span>
                         </div>
-
-
                     </div>
+
                     <div className="links mt-16 flex justify-center items-center gap-12 ">
                         <div className=" rounded-lg w-10 h-10   bg-neutral-700 p-0.5 group bg-gradient-to-br from-purple-500 to-pink-500 ">
                             <span className="relative flex justify-center items-center  gap-2 py-2  transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-lg ">
