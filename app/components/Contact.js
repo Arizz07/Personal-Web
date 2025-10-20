@@ -3,6 +3,7 @@ import Link from 'next/link'
 import React from 'react'
 import { FaFacebook, FaInstagram, FaLinkedinIn, FaRegEnvelope, FaWhatsapp } from 'react-icons/fa'
 import { useState, useEffect } from 'react'
+import { ToastContainer, toast } from 'react-toastify';
 
 function Contact() {
     const [form, setForm] = useState({
@@ -34,11 +35,11 @@ function Contact() {
         e.preventDefault();
         //save the details in local storage
         if (!form.mail || !form.name || !form.message) {
-            alert('Please fill all the fields');
+            toast.info('Please fill all the fields');
             return;
         }
         if (!form.mail.includes('@')) {
-            alert('Please enter a valid email address');
+            toast.info('Please enter a valid email address');
             return;
         }
         const newSubmission = [...submissions, form];
@@ -51,10 +52,12 @@ function Contact() {
             name: '',
             message: ''
         });
-        alert('Form submitted successfully!');
+        toast.success('Form submitted successfully!');
     }
 
     return (
+        <>
+        <ToastContainer />
         <div className="contact-form flex flex-col justify-center items-center min-h-screen  " id="contact">
 
             <h5 className="text-neutral-300 text-sm">Get In Touch</h5>
@@ -84,17 +87,22 @@ function Contact() {
                 <div className="social md:w-1/2   ">
                     <div className='flex  md:flex-row flex-col justify-center md:items-center mx-2 gap-8 '>
                         <div className=" rounded-md   bg-neutral-700 p-0.5 group bg-gradient-to-br from-purple-500 to-pink-500 ">
-                            <span className="relative  flex flex-col items-center gap-2 px-6 py-6  transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md ">
-                                <span><FaRegEnvelope size={25} /></span>
-                                <span>arisachi7201@gmail.com</span>
-                                <h5>Send me an Email</h5>
+                            <span className="relative  flex flex-col items-center gap-4 px-14 py-6  transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md ">
+                                <span><FaRegEnvelope size={30} /></span>
+                                <div className=" hover:cursor-pointer  hover:bg-fuchsia-600 rounded-lg flex flex-col justify-center items-center px-4 py-1">
+
+                                {/* <span>Mail</span> */}
+                                <Link href={'https://mail.google.com/mail/?view=cm&fs=1&to=arisachi7201@gmail.com'} target='_blank'>Email</Link>
+                                </div>
                             </span>
                         </div>
                         <div className=" rounded-md   bg-neutral-700 p-0.5 group bg-gradient-to-br from-purple-500 to-pink-500">
-                            <span className="relative  flex flex-col items-center gap-2 px-6 py-6  transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md ">
-                                <span><FaWhatsapp size={25} /></span>
-                                <span>+917994061577</span>
-                                <h5>Send me an Message</h5>
+                            <span className="relative  flex flex-col items-center gap-4 px-12 py-6  transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md ">
+                                <span><FaWhatsapp size={30} /></span>
+                            <div className="hover:cursor-pointer hover:bg-fuchsia-600 shadow-md rounded-lg flex flex-col justify-center items-center px-4 py-1">
+                                {/* <span>WhatsApp</span> */}
+                                <Link href={'https://wa.me/917994061577?text=hi%20there!!'} target='_blank'>Text Me</Link>
+                            </div>
                             </span>
                         </div>
                     </div>
@@ -102,17 +110,17 @@ function Contact() {
                     <div className="links mt-16 flex justify-center items-center gap-12 ">
                         <div className=" rounded-lg w-10 h-10   bg-neutral-700 p-0.5 group bg-gradient-to-br from-purple-500 to-pink-500 ">
                             <span className="relative flex justify-center items-center  gap-2 py-2  transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-lg ">
-                                <Link href={'/'} className='text-center'><FaInstagram size={20} /></Link>
+                                <Link href={'https://instagram.com/ariizz07'} className='text-center'><FaInstagram size={20} /></Link>
                             </span>
                         </div>
                         <div className=" rounded-lg w-10 h-10   bg-neutral-700 p-0.5 group bg-gradient-to-br from-purple-500 to-pink-500 ">
                             <span className="relative flex justify-center items-center  gap-2 py-2  transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-lg ">
-                                <Link href={'/'} className='text-center'><FaFacebook size={20} /></Link>
+                                <Link href={'https://facebook.com/ariizz07'} className='text-center'><FaFacebook size={20} /></Link>
                             </span>
                         </div>
                         <div className=" rounded-lg w-10 h-10   bg-neutral-700 p-0.5 group bg-gradient-to-br from-purple-500 to-pink-500 ">
                             <span className="relative flex justify-center items-center  gap-2 py-2  transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-lg ">
-                                <Link href={'/'} className='text-center'><FaLinkedinIn size={20} /></Link>
+                                <Link href={'https://www.linkedin.com/in/mahammad-arish-8a1280384'} className='text-center'><FaLinkedinIn size={20} /></Link>
                             </span>
                         </div>
 
@@ -120,6 +128,7 @@ function Contact() {
                 </div>
             </div>
         </div>
+        </>
     )
 }
 

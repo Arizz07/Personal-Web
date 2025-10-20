@@ -7,22 +7,22 @@ import Project from "./components/Project";
 export default function Home() {
   return (
   <>
-  <div className="container m-auto pt-26 min-h-[80vh] " id="home">
+  <div className="container m-auto pt-26 min-h-[50vh] md:min-h-[80vh] " id="home">
     <div className="prdetails text-center  ">
       <h4 className="font-pop text-xs">Heyy I&apos;m </h4>
       <h1 className="font-dm text-4xl pt-2 font-bold ">Mahammad Arish</h1>
-      <h4 className="font-pop text-gray-300 pt-2">FullStack Developer</h4>
+      <h4 className="font-pop text-gray-300 pt-2"> Mern Stack Developer</h4>
       <div className="buttons flex justify-center items-center gap-4 mt-8">
        <button className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800">
         <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-transparent group-hover:dark:bg-transparent font-semibold">
             <Link href={'http://github.com/Arizz07'}>GitHub</Link>
         </span>
         </button>
-       <button className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800">
+       <Link   href={'#contact'} className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800">
         <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-transparent group-hover:dark:bg-transparent font-semibold">
             Let&apos;s Talk!
         </span>
-        </button>
+        </Link>
       </div>
     </div>
   </div>
