@@ -13,10 +13,8 @@ function UI() {
     <Link href={'#about'}><FaCircleInfo size={20}/></Link>
     <Link href={'#projects'}><FaBarsProgress size={20}/></Link>
     <Link href={'#contact'}><FaUser size={20}/></Link>
-
    
     </div>
-    
    </div>
    </div>
   )
