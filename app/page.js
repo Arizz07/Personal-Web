@@ -7,7 +7,7 @@ import Project from "./components/Project";
 export default function Home() {
   return (
   <>
-  <div className="container m-auto pt-26 min-h-[50vh] md:min-h-[80vh] " id="home">
+  <div className="container m-auto pt-26 min-h-[60vh] md:min-h-[80vh] " id="home">
     <div className="prdetails text-center  ">
       <h4 className="font-pop text-xs">Heyy I&apos;m </h4>
       <h1 className="font-dm text-4xl pt-2 font-bold ">Mahammad Arish</h1>
